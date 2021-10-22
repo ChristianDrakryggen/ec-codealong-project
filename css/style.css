@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid red;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  z-index: 999;
+}
+
+.link-wrapper a {
+  margin-left: 10px;
+}
+
+#hero-section {
+  margin-top: 80px;
+  position: relative;
+  width: 100%;
+}
+
+#hero-section video {
+  width: 100%;
+  height: calc(100vh - 80px);
+  object-fit: cover;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero-video-overlay h1,
+.hero-video-overlay a {
+  color: white;
+}
+
+.hero-video-overlay h1 {
+  font-size: 45px;
+}
+
+.hero-video-overlay a {
+  border: 2px solid white;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.hero-video-overlay a:hover {
+  background-color: white;
+  color: black;
+}
+
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  margin: 40px 0px;
+}
+
+.service-card {
+  width: 300px;
+  margin: 20px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.service-card-header {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-card-header h3 {
+  margin-top: 10px;
+}
+
+.service-card p {
+  padding: 20px;
+}
