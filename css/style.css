@@ -36,10 +36,104 @@ a:hover {
 
 .header h1 {
   cursor: pointer;
+  margin-left: -1000px;
+  animation-name: slide-in;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes slide-in {
+  from {
+    margin-left: -1000px;
+  }
+  to {
+    margin-left: 0;
+  }
 }
 
 .link-wrapper a {
   margin-left: 10px;
+}
+
+@media (min-width: 800px) {
+  .mobile-logo,
+  .menu-button,
+  .mobile-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .desktop-logo,
+  .link-wrapper {
+    display: none;
+  }
+  .menu-button {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+  }
+  .menu-button-burger {
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .menu-button-burger::before,
+  .menu-button-burger::after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    transition: 0.5s;
+  }
+  .menu-button-burger::before {
+    transform: translateY(-10px);
+  }
+  .menu-button-burger::after {
+    transform: translateY(10px);
+  }
+  .menu-button.open .menu-button-burger {
+    transform: rotate(180deg);
+    background: transparent;
+  }
+  .menu-button.open .menu-button-burger::before {
+    transform: rotate(45deg);
+  }
+  .menu-button.open .menu-button-burger::after {
+    transform: rotate(-45deg);
+  }
+  .mobile-menu {
+    z-index: 998;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: red;
+    position: fixed;
+    right: -100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  .mobile-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-link-wrapper a {
+    margin: 10px;
+    font-size: 25px;
+  }
+  .mobile-link-wrapper a:hover {
+    color: white;
+  }
 }
 
 #hero-section {
@@ -86,6 +180,21 @@ a:hover {
 .hero-video-overlay a:hover {
   background-color: white;
   color: black;
+  animation-name: wiggle;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
 }
 
 .services-wrapper {
@@ -176,6 +285,7 @@ a:hover {
 
 .about-text-wrapper {
   color: white;
+  max-width: 70%;
 }
 
 .about-text-wrapper h2 {

@@ -11,14 +11,26 @@
 </head>
 <body>
     <header class="header">
-        <a href="#"><h1>Christian's Portfolio</h1></a>
+        <a href="#" class="desktop-logo"><h1>Christian's Portfolio</h1></a>
+        <a href="#" class="mobile-logo"><h1>CsP</h1></a>
         <nav class="link-wrapper">
             <a href="#">Home</a>
             <a href="#services-section">Services</a>
             <a href="#about-section">About</a>
             <a href="#contact-section">Contact</a>
         </nav>
+        <div class="menu-button">
+            <div class="menu-button-burger"></div>
+        </div>
     </header>
+    <div class="mobile-menu">
+        <nav class="mobile-link-wrapper">
+            <a class="mobile-link" href="#">Home</a>
+            <a class="mobile-link" href="#services-section">Services</a>
+            <a class="mobile-link" href="#about-section">About</a>
+            <a class="mobile-link" href="#contact-section">Contact</a>
+        </nav>
+    </div>
     <section id="hero-section">
         <video width="500" autoplay muted loop>
             <source src="./media/video/Pexels Videos 1350205.mp4" type="video/mp4">
@@ -132,4 +144,5 @@
         </section>
     </footer>
 </body>
+<script src="./scripts/app.js"></script>
 </html>
