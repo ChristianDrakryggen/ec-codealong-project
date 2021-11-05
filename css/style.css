@@ -326,3 +326,88 @@ a:hover {
 .social-icons-wrapper i:hover {
   color: red;
 }
+
+footer {
+  min-height: 80vh;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+#contact-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-section form {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(255, 112, 112, 0.16),
+    0 3px 6px rgba(255, 55, 55, 0.23);
+  padding: 20px;
+}
+
+#contact-section form input,
+#contact-section form textarea {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #acacac;
+  font-size: 15px;
+}
+
+#contact-section form button {
+  align-self: flex-end;
+  border-radius: 10px;
+  background-color: transparent;
+  color: black;
+  padding: 10px 20px;
+  border: 2px solid red;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+#contact-section form button:hover {
+  background-color: black;
+  color: white;
+}
+
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+  margin-top: 40px;
+}
+
+.contact-info-wrapper p,
+.contact-info-wrapper a,
+.contact-info-wrapper i {
+  color: white;
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.icon-and-text-wrapper a {
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+.icon-and-text-wrapper a:hover {
+  margin-left: 20px;
+}
